@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_form.name
+
+# Model Form Field configuration
+form: $/dubk0ff/breadcrumbmanager/models/breadcrumb/fields.yaml
+
+# Model Class name
+modelClass: Dubk0ff\BreadcrumbManager\Models\Breadcrumb
+
+# Default redirect location
+defaultRedirect: dubk0ff/breadcrumbmanager/breadcrumbs
+
+# Create page
+create:
+    title: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_form.create_title
+    redirect: dubk0ff/breadcrumbmanager/breadcrumbs/update/:id
+    redirectClose: dubk0ff/breadcrumbmanager/breadcrumbs/preview/:id
+
+# Update page
+update:
+    title: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_form.update_title
+    redirectClose: dubk0ff/breadcrumbmanager/breadcrumbs/preview/:id
+
+# Preview page
+preview:
+    title: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_form.preview_title

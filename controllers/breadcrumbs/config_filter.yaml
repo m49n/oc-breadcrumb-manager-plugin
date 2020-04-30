@@ -1,0 +1,26 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    # Filter: by parents
+    parents:
+        label: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_filter.parents
+        modelClass: Dubk0ff\BreadcrumbManager\Models\Breadcrumb
+        options: getParentsOptions
+        conditions: parent_id in (:filtered)
+
+    # Filter: by data type
+    data_type:
+        label: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_filter.data_type
+        modelClass: Dubk0ff\BreadcrumbManager\Models\Breadcrumb
+        options: getDataTypeOptions
+        conditions: data_type in (:filtered)
+
+    # Filter: by deleted entries
+    show_deleted:
+        label: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_filter.show_deleted
+        type: switch
+        conditions:
+            - deleted_at is null
+            - deleted_at is not null

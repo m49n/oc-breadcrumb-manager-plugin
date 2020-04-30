@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    _information:
+        type: hint
+        path: ~/plugins/dubk0ff/breadcrumbmanager/models/settings/_hint_information.htm
+
+    use_breadcrumbs_cache:
+        label: dubk0ff.breadcrumbmanager::lang.models.settings.use_breadcrumbs_cache
+        span: left
+        type: switch
+
+    use_templates_cache:
+        label: dubk0ff.breadcrumbmanager::lang.models.settings.use_templates_cache
+        span: right
+        type: switch
+
+    breadcrumbs_cache_expire:
+        label: dubk0ff.breadcrumbmanager::lang.models.settings.breadcrumbs_cache_expire
+        span: left
+        type: text
+        comment: dubk0ff.breadcrumbmanager::lang.models.settings.breadcrumbs_cache_expire_comment
+
+    templates_cache_expire:
+        label: dubk0ff.breadcrumbmanager::lang.models.settings.templates_cache_expire
+        span: right
+        type: text
+        comment: dubk0ff.breadcrumbmanager::lang.models.settings.templates_cache_expire_comment

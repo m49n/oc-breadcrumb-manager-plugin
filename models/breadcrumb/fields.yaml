@@ -1,0 +1,117 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.name
+        span: left
+        type: text
+        context: [create, update]
+
+    parent:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.parent
+        span: right
+        type: relation
+        nameFrom: name
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.parent_placeholder
+        context: [create, update]
+
+    data_type:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.data_type
+        span: full
+        type: dropdown
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.data_type_placeholder
+        context: [create, update]
+
+    _information:
+        type: partial
+        path: ~/plugins/dubk0ff/breadcrumbmanager/controllers/breadcrumbs/_hint_information.htm
+        context: [preview]
+
+    _code:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.code
+        type: codeeditor
+        size: giant
+        language: php
+        context: [preview]
+
+    # Static
+    static_title:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_title
+        span: left
+        type: text
+        required: true
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_title_placeholder
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[static]
+
+    static_link:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_link
+        span: right
+        type: text
+        required: true
+        placeholder: /
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[static]
+
+    # Static Plus
+    static_plus_title:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_plus_title
+        span: left
+        type: text
+        required: true
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_plus_title_placeholder
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[static_plus]
+
+    static_plus_segment:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.static_plus_segment
+        span: right
+        type: text
+        required: true
+        placeholder: users
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[static_plus]
+
+    # CMS
+    cms_page:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.cms_page
+        span: left
+        type: dropdown
+        required: true
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.cms_page_placeholder
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[cms]
+
+    cms_title_field:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.cms_title_field
+        span: right
+        type: dropdown
+        placeholder: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.cms_title_field_placeholder
+        context: [create, update]
+        dependsOn: data_type
+        trigger:
+            action: show
+            field: data_type
+            condition: value[cms]

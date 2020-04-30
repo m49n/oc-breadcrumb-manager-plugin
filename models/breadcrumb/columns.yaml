@@ -1,0 +1,35 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.id
+        searchable: true
+
+    name:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.name
+        type: text
+        searchable: true
+
+    parent:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.parent
+        relation: parent
+        select: name
+
+    data_type:
+        label: dubk0ff.breadcrumbmanager::lang.models.breadcrumb.data_type
+        type: partial
+        path: ~/plugins/dubk0ff/breadcrumbmanager/models/breadcrumb/_data_type.htm
+
+    deleted_at:
+        label: dubk0ff.breadcrumbmanager::lang.models.deleted_at
+        default: —
+        invisible: true
+
+    created_at:
+        label: dubk0ff.breadcrumbmanager::lang.models.created_at
+        invisible: true
+
+    updated_at:
+        label: dubk0ff.breadcrumbmanager::lang.models.updated_at

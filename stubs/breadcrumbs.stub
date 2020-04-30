@@ -1,0 +1,28 @@
+function onEnd()
+{
+    /* Array of breadcrumbs parameters */
+    $this['breadcrumbs_parameters'] = [
+{% for key, value in breadcrumbs %}
+{% if key == 'id' %}
+        // Breadcrumb ID
+        'id' => {{ value }},
+{% endif %}
+{% if (key == 'parameters') and (value is iterable) and (value|length > 0) %}
+        // Dynamic parameters of cms pages
+        'parameters' => [
+{% for k, v in value %}
+            '{{ k }}' => '{{ v }}',
+{% endfor %}
+        ],
+{% endif %}
+{% if (key == 'titles') and (value is iterable) and (value|length > 0) %}
+        // Dynamic titles of cms pages
+        'titles' => [
+{% for k, v in value %}
+            {{ k }} => '{{ v }}',
+{% endfor %}
+        ],
+{% endif %}
+{% endfor %}
+    ];
+}

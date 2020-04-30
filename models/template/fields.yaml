@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: dubk0ff.breadcrumbmanager::lang.models.template.title
+        type: text
+        comment: dubk0ff.breadcrumbmanager::lang.models.template.title_comment
+
+    code:
+        label: dubk0ff.breadcrumbmanager::lang.models.template.code
+        type: codeeditor
+        size: giant
+        language: twig
+
+    is_active:
+        label: dubk0ff.breadcrumbmanager::lang.models.template.is_active
+        type: switch
+        default: true
+        on: dubk0ff.breadcrumbmanager::lang.models.template.is_active_on
+        off: dubk0ff.breadcrumbmanager::lang.models.template.is_active_off

@@ -1,0 +1,20 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    # Filter: by activity
+    show_actived:
+        label: dubk0ff.breadcrumbmanager::lang.controllers.templates.config_filter.show_actived
+        type: switch
+        conditions:
+            - is_active is not true
+            - is_active is true
+
+    # Filter: by deleted entries
+    show_deleted:
+        label: dubk0ff.breadcrumbmanager::lang.controllers.templates.config_filter.show_deleted
+        type: switch
+        conditions:
+            - deleted_at is null
+            - deleted_at is not null

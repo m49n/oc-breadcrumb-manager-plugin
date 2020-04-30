@@ -1,0 +1,9 @@
+{% set breadcrumbs = __SELF__.makeBreadcrumbs() %}
+
+{% if __SELF__.property('isJsonLd') == true %}
+    {% put styles %}
+        <script type="application/ld+json">{{ __SELF__.renderJsonLd(breadcrumbs)|raw }}</script>
+    {% endput %}
+{% endif %}
+
+{{ __SELF__.renderBreadcrumbs(breadcrumbs)|raw }}

@@ -1,0 +1,5 @@
+1.0.1:
+  - Initialize BreadcrumbManager plugin.
+  - Run table migrations.
+  - create_breadcrumbs_table.php
+  - create_templates_table.php

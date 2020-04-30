@@ -1,0 +1,12 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: dubk0ff.breadcrumbmanager::lang.controllers.breadcrumbs.config_reorder.title
+
+# Attribute name
+nameFrom: name
+
+# Model Class name
+modelClass: Dubk0ff\BreadcrumbManager\Models\Breadcrumb
